@@ -3,4 +3,25 @@
         test
     </title>
 build1
+
+<script src="$(document).ready(function() {
+    setInterval(timestamp, 1000);
+});
+
+function timestamp() {
+    $.ajax({
+        url: 'http://localhost/timestamp.php',
+        success: function(data) {
+            $('#timestamp').html(data);
+        },
+    });
+}></script>
+<script>
+
+<?php
+    date_default_timezone_set('YOUR TIMEZONE');
+    echo $timestamp = date('H:i:s'
+
+<div id="timestamp"></div>
+
 </html>
